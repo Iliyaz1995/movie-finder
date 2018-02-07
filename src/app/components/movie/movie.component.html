@@ -1,0 +1,32 @@
+<div class="container-fluid full-height">
+
+   <div class="card bg-dark text-white" style="margin-top:100px;">
+     <div class="container">
+      <h3 class="card-header">{{movieDetails.title }}</h3>
+
+      <div class="row" style="padding-bottom:20px;">
+        <div class="col-md-3">
+          <img  class="img-thumbnail" *ngIf="movieDetails.poster_path" src="https://image.tmdb.org/t/p/w500{{movieDetails.poster_path}}" style="width:100%;">
+       </div>
+      <div class="offset-md-2 col-md-7">
+        <div class="card-block">
+
+           <p class="card-text">Release Date : {{movieDetails.release_date}}</p>
+           <p class="card-text">Original Language : {{movieDetails.original_language}}</p>
+           <p class="card-text">Run Time : {{movieDetails.runtime}} mins.</p>
+           <p class="card-text">Rating : {{movieDetails.vote_average}}</p>
+           <p class="card-text">Genre : {{genres}}</p>
+           <p class="card-text" style="font-style:italic;"><q>{{movieDetails.overview}}</q></p>
+
+
+
+
+           <a href="{{movieDetails.homepage}}" target="_blank"class="btn btn-primary" *ngIf="movieDetails.homepage !==''">Visit movie website</a>
+        </div>
+      </div>
+
+       </div>
+
+</div>
+  </div>
+</div>
