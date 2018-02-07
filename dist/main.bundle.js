@@ -38,7 +38,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\n<nav class=\"navbar navbar-expand-lg navbar-light bg-dark fixed-top\">\n  <div class=\"container\">\n\n  <a class=\"navbar-brand\" routerLink=\"/\" style=\"font-size:28px; font-weight:bold; color:white;\">Movie Finder</a>\n  <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n    <span class=\"navbar-toggler-icon\"></span>\n  </button>\n\n  <!-- <div class=\"collapse navbar-collapse offset-md-5 col-md-5\" id=\"navbarSupportedContent\">\n      <input class=\"form-control\" type=\"search\" placeholder=\"Search\" aria-label=\"Search\">\n  </div> -->\n</div>\n</nav>\n\n<router-outlet></router-outlet>\n"
+module.exports = "\n<nav class=\"navbar navbar-expand-lg navbar-light bg-dark fixed-top\">\n  <div class=\"container\">\n\n  <a class=\"navbar-brand\" routerLink=\"/\" style=\"font-size:28px; font-weight:bold; color:white;\">Movie Finder</a>\n  <!-- <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n    <span class=\"navbar-toggler-icon\"></span>\n  </button> -->\n\n  <!-- <div class=\"collapse navbar-collapse offset-md-5 col-md-5\" id=\"navbarSupportedContent\">\n      <input class=\"form-control\" type=\"search\" placeholder=\"Search\" aria-label=\"Search\">\n  </div> -->\n</div>\n</nav>\n\n<router-outlet></router-outlet>\n"
 
 /***/ }),
 
