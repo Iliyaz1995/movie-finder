@@ -38,7 +38,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "\n\n<router-outlet></router-outlet>\n"
+module.exports = "\n\n<router-outlet></router-outlet>\n<footer>\n  <div class=\"container-fluid\" style=\"color:white;background-color:#212223;padding:20px 0;\">\n    <div class=\"container\">\n      <p class=\"heading\">Created By Iliyaz @ Angular 5.2.0</p>\n    </div>\n  </div>\n</footer>\n"
 
 /***/ }),
 
