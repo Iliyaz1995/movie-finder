@@ -9,23 +9,46 @@ import { ActivatedRoute } from '@angular/router'
 })
 export class MovieComponent implements OnInit {
   movieId:string;
-  movieDetails:Array<object>;
+  movieDetails:Array<object> =[];
   genres:Array<object>;
+  searchStr:string = '';
+  searchList:Array<object>;
+  focus:boolean = false;
 
   constructor(private movieService:MovieService, private route:ActivatedRoute) { }
     getMovieDetails(){
        this.movieService.getMovieDetails(this.movieId).subscribe(res=>{
-         console.log(res)
+         // console.log(res)
          this.movieDetails = res;
          this.genres = res.genres.map(function(a) {return a["name"];});
 
-         console.log(this.genres)
+         // console.log(this.genres)
 
        })
     }
+    searchMovies(){
+      // console.log(this.searchStr);
+      if(this.searchStr !==''){
+      this.movieService.searchMovies(this.searchStr).subscribe((res)=>{
+        console.log(res.results)
+        this.searchList = res.results;
+      })
+
+    }
+    }
+    showOnFocus(){
+     // console.log('focus in')
+     this.focus = true;
+    }
+    hideOnFocusOut(){
+      this.focus = false;
+      // console.log('focus out')
+    }
+
+
   ngOnInit() {
     this.route.params.subscribe((params)=>{
-      console.log(params.id);
+      // console.log(params);
       this.movieId = params.id;
       this.getMovieDetails()
     });

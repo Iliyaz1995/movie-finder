@@ -1,5 +1,8 @@
-import { Component } from '@angular/core';
-// import { RO } from '@angular/router'
+import { Component ,OnInit} from '@angular/core';
+import { ActivatedRoute } from '@angular/router'
+// import { MovieService } from '../../services/movie.service';
+
+
 
 @Component({
   selector: 'app-root',
@@ -7,6 +10,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
   providers:[]
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
+  constructor(private Route:ActivatedRoute) { }
+
+  MoviePage:boolean = false;
+  // isInMoviePage:boolean = false;
+
+  clicked(){
+    this.MoviePage =true;
+    if(this.MoviePage === true){
+      // console.log('in Home Page')
+    }
+  }
+
+  ngOnInit() {
+  }
 
 }

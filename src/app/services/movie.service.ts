@@ -8,14 +8,13 @@ import 'rxjs/Rx'
 @Injectable()
 export class MovieService {
 
+private searchStr;
 private apiKey = 'e232e06cb289d4d8cca7b9029a65a706';
 private popmoviesURL = 'https://api.themoviedb.org/3/discover/movie?api_key=e232e06cb289d4d8cca7b9029a65a706';
 private recentMovieURL = 'https://api.themoviedb.org/3/discover/movie?primary_release_date.gte=2018-01-01&primary_release_date.lte=2018-02-05&sort_by=popularity.desc&api_key=e232e06cb289d4d8cca7b9029a65a706';
 private genereURL = 'https://api.themoviedb.org/3/genre/movie/list?api_key=e232e06cb289d4d8cca7b9029a65a706&language=en-US';
 
-  constructor(private http: Http) {
-    console.log('everything is alright')
-  }
+  constructor(private http: Http) {}
 
 // popular movies api call
  GetPopMovies(){
