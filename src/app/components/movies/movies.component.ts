@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,ɵisObservable } from '@angular/core';
 import { MovieService } from '../../services/movie.service'
 
 
@@ -14,7 +14,7 @@ export class MoviesComponent implements OnInit {
   searchStr:string = '';
   searchList:Array<object>;
   recentMovies:Array<object>;
-  focus:boolean = false;
+
 
     constructor(private movieService:MovieService) {}
      getPopMovi(){
@@ -40,17 +40,12 @@ export class MoviesComponent implements OnInit {
         this.searchList = res.results;
       })
     }
+  }
 
-    }
-
-
-    showOnFocus(){
-     // console.log('focus in')
-     this.focus = true;
-    }
     hideOnFocusOut(){
-      this.focus = false;
-      // console.log('focus out')
+      setTimeout(()=>{
+         this.searchStr = '';
+      },700)
     }
 
 

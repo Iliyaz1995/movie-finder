@@ -17,15 +17,14 @@
              [(ngModel)]="searchStr"
              (keyup)="searchMovies()"
              (blur)="hideOnFocusOut()"
-             (focus)="showOnFocus()"
              >
   </div>
   </div>
 </nav>
 
 <div class="container">
-  <div *ngIf = "focus === true"class="row">
-    <div class="offset-lg-6 offset-lg-4 offset-md-2 col-md-6 col-sm-12 searchContent scrollbar">
+  <div *ngIf = "searchStr !== ''" class="row">
+    <div class="offset-lg-6 offset-lg-4 offset-md-2 col-md-5 col-sm-12 searchContent scrollbar">
        <div class="row text-white" *ngFor="let movie of searchList; let i = index;"  style="border:1px solid black;">
          <div class="col-md-3 col-sm-4 col-6">
 <img  class="img-thumbnail" *ngIf="movie.poster_path" src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}" style="width:95%;">
@@ -36,7 +35,7 @@
                <h5 class="card-title">{{movie.title}}</h5>
                <p class="card-text">Release Date: {{movie.release_date}}</p>
                <p class="card-text">genere: Action, Sci-fi, Adventure</p>
-               <button type="button" name="button" class="btn btn-info float-right" routerLink="movie/{{movie.id}}">details</button>
+               <button type="button" name="button" class="btn btn-info float-right" routerLink="../{{movie.id}}">details</button>
 
              </div>
             </div>

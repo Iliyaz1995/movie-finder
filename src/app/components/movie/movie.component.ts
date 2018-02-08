@@ -13,7 +13,6 @@ export class MovieComponent implements OnInit {
   genres:Array<object>;
   searchStr:string = '';
   searchList:Array<object>;
-  focus:boolean = false;
 
   constructor(private movieService:MovieService, private route:ActivatedRoute) { }
     getMovieDetails(){
@@ -30,21 +29,19 @@ export class MovieComponent implements OnInit {
       // console.log(this.searchStr);
       if(this.searchStr !==''){
       this.movieService.searchMovies(this.searchStr).subscribe((res)=>{
-        console.log(res.results)
+        // console.log(res.results)
         this.searchList = res.results;
       })
 
     }
     }
-    showOnFocus(){
-     // console.log('focus in')
-     this.focus = true;
-    }
-    hideOnFocusOut(){
-      this.focus = false;
-      // console.log('focus out')
-    }
 
+
+   hideOnFocusOut(){
+     setTimeout(()=>{
+        this.searchStr = '';
+     },700)
+   }
 
   ngOnInit() {
     this.route.params.subscribe((params)=>{
@@ -53,5 +50,6 @@ export class MovieComponent implements OnInit {
       this.getMovieDetails()
     });
   }
+
 
 }
