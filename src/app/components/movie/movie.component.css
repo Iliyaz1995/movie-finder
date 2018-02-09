@@ -11,7 +11,8 @@
                             z-index: 5;
                             background-color: rgba(99, 99, 99, 0.53);
                             box-shadow: 0 0 10px #000;
-                            color: white;}
+                            color: white;
+                            }
 
 
                             .scrollbar::-webkit-scrollbar-track

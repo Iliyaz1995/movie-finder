@@ -32,7 +32,7 @@
          <div class="col-md-9 col-sm-8 col-6">
            <div class="card text-white" style="background-color:rgba(99, 99, 99, 0.75);">
              <div class="card-body">
-               <h5 class="card-title">{{movie.title}}</h5>
+               <h5 class="card-title" style="cursor: pointer;" routerLink="../{{movie.id}}">{{movie.title}}</h5>
                <p class="card-text">Release Date: {{movie.release_date}}</p>
                <p class="card-text">genere: Action, Sci-fi, Adventure</p>
                <button type="button" name="button" class="btn btn-info float-right" routerLink="../{{movie.id}}">details</button>
@@ -86,7 +86,7 @@
 </div>
 
 <footer>
-  <div class="container-fluid" style="color:white;background-color:#212223;padding:20px 0;">
+  <div class="container-fluid fixed-bottom" style="color:white;background-color:#212223;padding:20px 0;">
     <div class="container">
       <p class="heading">Created By Iliyaz @ Angular 5.2.0</p>
     </div>

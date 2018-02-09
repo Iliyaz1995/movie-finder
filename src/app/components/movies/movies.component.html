@@ -31,7 +31,7 @@
            <div class="col-md-9 col-sm-8 col-6">
              <div class="card text-white" style="background-color:rgba(99, 99, 99, 0.75);">
                <div class="card-body">
-                 <h5 class="card-title">{{movie.title}}</h5>
+                 <h5 routerLink="movie/{{movie.id}}" class="card-title" style="cursor: pointer;">{{movie.title}}</h5>
                  <p class="card-text">Release Date: {{movie.release_date}}</p>
                  <p class="card-text">genere: Action, Sci-fi, Adventure</p>
                  <button type="button" name="button" class="btn btn-info float-right" routerLink="movie/{{movie.id}}">details</button>
@@ -60,7 +60,7 @@
       <div *ngIf=i<8>
         <img  class="img-thumbnail" *ngIf="movie.poster_path" src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}" style="width:70%;">
         <div class="card-block">
-          <p class="card-text"><strong>{{movie.title}}</strong></p>
+          <p class="card-text" routerLink="movie/{{movie.id}}" style="cursor: pointer;"><strong>{{movie.title}}</strong></p>
           <p class="card-text">Release Date:<br>{{movie.release_date}}</p>
           <a routerLink="movie/{{movie.id}}" class="btn btn-info" >Details</a>
         </div>
@@ -86,7 +86,7 @@
       <div *ngIf=i<8>
         <img  class="img-thumbnail" *ngIf="movie.poster_path" src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}" style="width:70%;">
         <div class="card-block">
-          <p class=""><strong>{{movie.title}}</strong></p>
+          <p class="" routerLink="movie/{{movie.id}}" style="cursor: pointer;"><strong>{{movie.title}}</strong></p>
           <p class="">Release Date:<br>{{movie.release_date}}</p>
           <a routerLink="movie/{{movie.id}}" class="btn btn-info" >Details</a>
         </div>
